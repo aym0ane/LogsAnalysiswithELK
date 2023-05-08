@@ -51,6 +51,5 @@ After loading the Mozilla build logs into Elasticsearch, we can visualize the da
 
 ## Conclusion
 
- In conclusion, bike-sharing has emerged as an increasingly popular mode of transportation in many cities and generated large volumes of data. By analyzing this data through various techniques, ride-sharing companies can gain valuable insights into user behavior and preferences such as usage patterns, popular routes, peak hours/days, demographics etc. These insights can be used to improve service quality and enhance customer experience by providing them with better services that meet their needs. As bike-sharing continues to grow as a sustainable alternative for transit systems worldwide, the utilization of data-driven insights will be vital for successful future development and expansion efforts.
-
+In conclusion, the Mozilla Build System Logs Analysis using Elk project aimed to provide insights and valuable information from the Mozilla build logs. Through the use of Logstash, Elasticsearch, and Kibana, we were able to transform the raw log data into a structured and searchable format. The project involved data preparation, configuring Filebeat and Logstash, mapping the data in Elasticsearch, and creating visualizations in Kibana. With this project, we were able to successfully analyze the build logs and identify issues that could potentially impact the overall build process. The project demonstrated the power and flexibility of the ELK stack in transforming large amounts of unstructured data into actionable insights.
 

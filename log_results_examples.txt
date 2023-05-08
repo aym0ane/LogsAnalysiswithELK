@@ -1,0 +1,104 @@
+{
+
+"logid": "129546168", 
+"starttime": 1527809833.77, 
+"results": "success (0)", 
+"project": "", 
+"product": "firefox", 
+"script_repo_revision": "production", 
+"scheduler": "tests-mozilla-esr52-yosemite_r7-debug-unittest", 
+"repository": "", 
+"buildername": "Rev7 MacOSX Yosemite 10.10.5 mozilla-esr52 debug test mochitest-e10s-browser-chrome-5", 
+"buildid": "20180531145517", 
+"pgo_build": "False", 
+"basedir": "/builds/slave/test", 
+"buildnumber": 20, 
+"slavename": "t-yosemite-r7-0015", 
+"taskos": "", 
+"revision": "6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae", 
+"master": "http://buildbot-master106.bb.releng.scl3.mozilla.com:8201/", 
+"platform": "macosx64", 
+"branch": "mozilla-esr52", 
+"repo_path": "releases/mozilla-esr52", 
+"moz_repo_path": "", 
+"stage_platform": "macosx64", 
+"builduid": "78335de457204b33a8af330b867dc264", 
+"slavebuilddir": "test", 
+
+
+
+"Steps": 
+[
+
+{"stepname": "set props: master", "startedDateTime": "2018-05-31 16:37:13.773168", "endDateTime": "2018-05-31 16:37:13.773597", "secs": 0.000429, "steps_nub": 1, "arguments": ""}, 
+{"stepname": "downloading to buildprops.json", "startedDateTime": "2018-05-31 16:37:13.773871", "endDateTime": "2018-05-31 16:37:13.790166", "secs": 0.016295, "steps_nub": 0, "arguments": ""}, 
+{"stepname": "bash -c ...", "startedDateTime": "2018-05-31 16:37:13.790549", "endDateTime": "2018-05-31 16:37:14.043209", "secs": 0.25266, "steps_nub": 39, "arguments": ["bash", "-c", "wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py"]}, 
+{"stepname": "rm -rf ...", "startedDateTime": "2018-05-31 16:37:14.043542", "endDateTime": "2018-05-31 16:37:14.091225", "secs": 0.047683, "steps_nub": 28, "arguments": ["rm", "-rf", "scripts", "properties"]}, 
+{"stepname": "bash -c ...", "startedDateTime": "2018-05-31 16:37:14.094608", "endDateTime": "2018-05-31 16:37:15.336438", "secs": 1.24183, "steps_nub": 33, "arguments": ["bash", "-c", "upython archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae --destination scripts --debug"]}, 
+{"stepname": "set props: script_repo_revision", "startedDateTime": "2018-05-31 16:37:15.336777", "endDateTime": "2018-05-31 16:37:15.337201", "secs": 0.000424, "steps_nub": 1, "arguments": ["bash", "-c", "upython archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae --destination scripts --debug"]}, 
+{"stepname": "downloading to oauth.txt", "startedDateTime": "2018-05-31 16:37:15.337470", "endDateTime": "2018-05-31 16:37:15.347782", "secs": 0.010312, "steps_nub": 0, "arguments": ["bash", "-c", "upython archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae --destination scripts --debug"]}, 
+{"stepname": "/tools/buildbot/bin/python -u ...", "startedDateTime": "2018-05-31 16:37:15.348057", "endDateTime": "2018-05-31 17:00:12.491125", "secs": 1377.143068, "steps_nub": 20191, "arguments": ["/tools/buildbot/bin/python", "-u", "scripts/scripts/desktop_unittest.py", "--cfg", "unittests/mac_unittest.py", "--mochitest-suite", "browser-chrome-chunked", "--e10s", "--total-chunks", "7", "--this-chunk", "5", "--blob-upload-branch", "mozilla-esr52", "--download-symbols", "true"]}, 
+{"stepname": "set props: build_url blobber_files symbols_url", "startedDateTime": "2018-05-31 17:00:12.497983", "endDateTime": "2018-05-31 17:00:12.528533", "secs": 0.03055, "steps_nub": 34, "arguments": ["bash", "-c", "for file in `ls -1`; do cat $file; done"]}, {"stepname": "rm -f ...", "startedDateTime": "2018-05-31 17:00:12.528900", "endDateTime": "2018-05-31 17:00:12.577432", "secs": 0.048532, "steps_nub": 28, "arguments": ["rm", "-f", "oauth.txt"]}, 
+{"stepname": "reboot skipped", "startedDateTime": "2018-05-31 17:00:12.577764", "endDateTime": "2018-05-31 17:00:12.578068", "secs": 0.000304, "steps_nub": 0, "arguments": ["rm", "-f", "oauth.txt"]}
+
+]
+
+
+}
+
+
+
+
+*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+
+
+
+{
+
+"logid": "129546236", 
+"starttime": 1527808511.85, 
+"results": "success (0)", 
+"project": "", 
+"product": "firefox", 
+"script_repo_revision": "production", 
+"scheduler": "tests-mozilla-esr52-ubuntu32_vm-debug-unittest", 
+"repository": "", 
+"buildername": "Ubuntu VM 12.04 mozilla-esr52 debug test mochitest-8", 
+"buildid": "20180531145517", 
+"pgo_build": "False", 
+"basedir": "/builds/slave/test", 
+"buildnumber": 43, 
+"slavename": "tst-linux32-spot-006", 
+"taskos": "linux", 
+"revision": "6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae", 
+"master": "http://buildbot-master02.bb.releng.use1.mozilla.com:8201/", 
+"platform": "linux", 
+"branch": "mozilla-esr52", 
+"repo_path": "releases/mozilla-esr52", 
+"moz_repo_path": "", 
+"stage_platform": "linux", 
+"builduid": "78335de457204b33a8af330b867dc264", 
+"slavebuilddir": "test", 
+
+
+
+"Steps": 
+[
+
+{"stepname": "set props: master", "startedDateTime": "2018-05-31 16:15:11.851155", "endDateTime": "2018-05-31 16:15:11.851583", "secs": 0.000428, "steps_nub": 1, "arguments": ""}, 
+{"stepname": "downloading to buildprops.json", "startedDateTime": "2018-05-31 16:15:11.851882", "endDateTime": "2018-05-31 16:15:12.028443", "secs": 0.176561, "steps_nub": 0, "arguments": ""}, 
+{"stepname": "bash -c ...", "startedDateTime": "2018-05-31 16:15:12.028803", "endDateTime": "2018-05-31 16:15:12.715652", "secs": 0.686849, "steps_nub": 34, "arguments": ["bash", "-c", "wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py"]}, 
+{"stepname": "rm -rf ...", "startedDateTime": "2018-05-31 16:15:12.716005", "endDateTime": "2018-05-31 16:15:12.831334", "secs": 0.115329, "steps_nub": 23, "arguments": ["rm", "-rf", "scripts", "properties"]}, 
+{"stepname": "bash -c ...", "startedDateTime": "2018-05-31 16:15:12.831815", "endDateTime": "2018-05-31 16:15:15.834729", "secs": 3.002914, "steps_nub": 28, "arguments": ["bash", "-c", "upython archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae --destination scripts --debug"]}, 
+{"stepname": "set props: script_repo_revision", "startedDateTime": "2018-05-31 16:15:15.835092", "endDateTime": "2018-05-31 16:15:15.835493", "secs": 0.000401, "steps_nub": 1, "arguments": ["bash", "-c", "upython archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae --destination scripts --debug"]}, 
+{"stepname": "downloading to oauth.txt", "startedDateTime": "2018-05-31 16:15:15.835783", "endDateTime": "2018-05-31 16:15:15.849006", "secs": 0.013223, "steps_nub": 0, "arguments": ["bash", "-c", "upython archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 6f24d03e6e59f9090b6e48cb8f2beea59be6b3ae --destination scripts --debug"]}, 
+{"stepname": "/tools/buildbot/bin/python -u ...", "startedDateTime": "2018-05-31 16:15:15.849390", "endDateTime": "2018-05-31 17:06:16.886281", "secs": 3061.036891, "steps_nub": 13666, "arguments": ["/tools/buildbot/bin/python", "-u", "scripts/scripts/desktop_unittest.py", "--cfg", "unittests/linux_unittest.py", "--mochitest-suite", "plain-chunked", "--total-chunks", "10", "--this-chunk", "8", "--blob-upload-branch", "mozilla-esr52", "--download-symbols", "true"]}, 
+{"stepname": "set props: build_url blobber_files symbols_url", "startedDateTime": "2018-05-31 17:06:16.896088", "endDateTime": "2018-05-31 17:06:17.054952", "secs": 0.158864, "steps_nub": 29, "arguments": ["bash", "-c", "for file in `ls -1`; do cat $file; done"]}, 
+{"stepname": "rm -f ...", "startedDateTime": "2018-05-31 17:06:17.055329", "endDateTime": "2018-05-31 17:06:17.170816", "secs": 0.115487, "steps_nub": 23, "arguments": ["rm", "-f", "oauth.txt"]}, 
+{"stepname": "reboot skipped", "startedDateTime": "2018-05-31 17:06:17.171164", "endDateTime": "2018-05-31 17:06:17.171453", "secs": 0.000289, "steps_nub": 0, "arguments": ["rm", "-f", "oauth.txt"]}
+
+]
+
+
+}

@@ -21,24 +21,29 @@ The script utilized regular expressions to identify key data points such as the 
 
  #### Code in  : data(logs) Preparation.ipynb 
 
-![log transformation function ]()
+![log transformation function ](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/transofrmationexemple.JPG)
 
 This allowed for more efficient storage and retrieval of the log data, as well as enabling more advanced analysis and visualization using Kibana. 
 
 #### logs structure after the transformation  : 
-![logs after transformation ]()
+![logs after transformation ](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/logstructure.JPG)
 
 The data preparation phase was critical in ensuring that the log data was properly structured and formatted for analysis, and laid the foundation for the subsequent phases of the project.
 
 
 ## Configuration of filebeat and  Logstash
-
-
-configurations
+#### the configuration of Filebeat YML file : 
+1 : 
+![filebeat config](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/filebeatconfig.JPG)
+2 : 
+![filebeat config 2 ](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/filebeat%20config%202.JPG)
+#### Logstach Configuration  : 
+![logstash config](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/logconfig.JPG)
 
 ## Mapping in Elasticsearch
 
 Using  Elasticsearch as our database, we needed to create a mapping that would define the structure of our documents. The mapping outlines the fields and their types, which allows Elasticsearch to index and search the data more efficiently.
+####  [Here is the mapping we used ](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/Mapping.txt)
 
 In our case, we created a mapping that included various fields, such as "@timestamp," which is a reserved field in Elasticsearch that stores the timestamp of each log event, and "@version," which represents the version of the log. We also included fields like "host," "log," "errno," and "file," each of which is defined with its own data type and properties. By creating this mapping, we were able to ensure that the data would be stored accurately and efficiently in Elasticsearch, allowing us to easily search and analyze the data with Kibana.
 
@@ -47,7 +52,11 @@ In our case, we created a mapping that included various fields, such as "@timest
 
 After loading the Mozilla build logs into Elasticsearch, we can visualize the data using Kibana. Kibana provides various options for creating visualizations such as bar charts, line charts, pie charts, and more. We can use Kibana to create visualizations of the Mozilla build logs to better understand the data and draw insights.
 
+#### we creat the index 
+![INDEX](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/creatingIndex.JPG)
 
+#### DASHBOARD 
+![Dashboard](https://github.com/aym0ane/LogsAnalysiswithELK/blob/main/imgs/Dashboard.JPG)
 
 ## Conclusion
 
